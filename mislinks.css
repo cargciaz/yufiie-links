@@ -31,7 +31,7 @@ body {
     width: 80%;
     max-width: 700px;
     margin: auto;
-    padding: 40px 0;
+    padding: 20px 0;
 
     .bio {
         text-align: center;
@@ -43,7 +43,16 @@ body {
         height: 150px;
         border-radius: 100px;
         margin-bottom: 20px;
+        border: 2px solid cyan;
+        box-shadow: rgba(0, 176, 121, 0.25) 0px 50px 100px -20px, rgba(44, 255, 237, 0.3) 0px 30px 60px -30px;
+        transition: 0.5s ease all;
 }
+
+    .foto:hover{
+        border: 2px solid magenta;
+        box-shadow: rgba(204, 0, 255, 0.25) 0px 50px 100px -20px, rgba(254, 62, 245, 0.3) 0px 30px 60px -30px;
+        transform: scale(1.1);
+    }
 
     .nombre{
         margin-bottom: 5px;
@@ -52,7 +61,9 @@ body {
 
     .descripcion{
         font-size: 18px;
+        font-family: "Montserrat", sans-serif;
     }
+
 
     .links {
 
@@ -100,7 +111,57 @@ body {
                 background: rgb(239, 139, 0);
                 
             }
+
+            &.csgo:hover{
+                background: rgb(1, 1, 211);
+            }
         }
         
+    }
+}
+
+
+@media (max-width: 768px) {
+    .contenedor {
+        width: 90%;
+        padding: 15px 0;
+    }
+
+    .foto {
+        width: 120px;
+        height: 120px;
+    }
+
+    .nombre {
+        font-size: 28px;
+    }
+
+    .descripcion {
+        font-size: 16px;
+    }
+
+    .links .link {
+        padding: 15px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    body::after {
+        backdrop-filter: blur(10px);
+    }
+
+    .contenedor {
+        width: 95%;
+    }
+
+    .foto {
+        width: 100px;
+        height: 100px;
+    }
+
+    .nombre {
+        font-size: 24px;
     }
 }
